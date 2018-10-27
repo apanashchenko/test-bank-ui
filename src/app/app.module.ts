@@ -12,7 +12,7 @@ import { TestCasesListComponent } from './test-cases-list/test-cases-list.compon
 import { TestCaseDetailsComponent } from './test-case-details/test-case-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatInputModule, MatSidenavModule, MatFormFieldModule,
-         MatToolbarModule, MatIconModule, MatListModule} from '@angular/material';
+         MatToolbarModule, MatIconModule, MatListModule, MatCardModule} from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -40,6 +40,7 @@ import { FooterComponent } from './footer/footer.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
