@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from  '../api.service';
+import { ApiService } from  '../services/api.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TestCasesListComponent implements OnInit {
 
-  private cases:  Array<object> = [];
+  cases:  Array<object> = [];
 
   constructor(private  apiService:  ApiService, private route: ActivatedRoute) { }
 
@@ -18,8 +18,8 @@ export class TestCasesListComponent implements OnInit {
   }
 
   public  getCases(){
-    const suiteId = +this.route.snapshot.paramMap.get('suiteId');
-    this.apiService.getCases(suiteId).subscribe((data:  Array<object>) => {
+    const projectId = +this.route.snapshot.paramMap.get('projectId');
+    this.apiService.getCases(projectId).subscribe((data:  Array<object>) => {
       this.cases  =  data;
       console.log(data);
     });

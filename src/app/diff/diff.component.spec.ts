@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SuiteCreateComponent } from './suite-create.component';
+import { DiffComponent } from './diff.component';
 
-describe('SuiteCreateComponent', () => {
-  let component: SuiteCreateComponent;
-  let fixture: ComponentFixture<SuiteCreateComponent>;
+describe('DiffComponent', () => {
+  let component: DiffComponent;
+  let fixture: ComponentFixture<DiffComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SuiteCreateComponent ]
+      declarations: [ DiffComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SuiteCreateComponent);
+    fixture = TestBed.createComponent(DiffComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
