@@ -7,7 +7,7 @@ import { environment } from '@env/environment';
   providedIn: 'root'
 })
 export class ApiService {
-
+  
   API_URL = environment.apiUrl;
   httpOptions = {
     headers: new HttpHeaders({
@@ -40,5 +40,13 @@ export class ApiService {
 
   createSuite(projectId, suite){
     return this.httpClient.post(`${this.API_URL}/projects/${projectId}/suites`, suite, this.httpOptions);
+  }
+
+  requestReview(caseId: number, committer: Object) {
+    return this.httpClient.post(`${this.API_URL}/case/${caseId}/create-review`, committer);
+  }
+
+  merge(pullRequestId: number) {
+    return this.httpClient.post(`${this.API_URL}/pull-request/${pullRequestId}/merge`, {});
   }
 }
